@@ -1,9 +1,13 @@
-using System;
+Console.Write("What is your grade percentage?");
+string gradeper = Console.ReadLine();
+int percentage = int.Parse(gradeper);
 
-class Program
+if (percentage >= 90)
 {
-    static void Main(string[] args)
-    {
-        Console.WriteLine("Hello World! This is the Exercise2 Project.");
-    }
+    Console.Write("A");
+}
+
+else if (percentage >= 80 && percentage < 89)
+{
+    Console.Write("B");
 }
