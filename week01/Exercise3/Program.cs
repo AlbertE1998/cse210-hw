@@ -1,27 +1,36 @@
-Random randomGenerator = new Random();
-int number = randomGenerator.Next(1, 11);
+using System;
 
-int intguess = 0;
-
-while (intguess != number)
+class Program
 {
-    Console.Write("What is your guess? ");
-    string guess = Console.ReadLine();
-    intguess = int.Parse(guess);
+    static void Main(string[] args)
+    {
 
-        if (intguess == number)
-        {
-            Console.WriteLine("You guessed it! ");
+    Random randomGenerator = new Random();
+    int number = randomGenerator.Next(1, 11);
 
-        }   
+    int intguess = 0;
 
-        else if (intguess > number)
-        {
-            Console.WriteLine("Lower ");
-        }
+    while (intguess != number)
+    {
+        Console.Write("What is your guess? ");
+        string guess = Console.ReadLine();
+        intguess = int.Parse(guess);
 
-        else if (intguess < number)
-        {
-            Console.WriteLine("Higher ");
-        }
+            if (intguess == number)
+            {
+                Console.WriteLine("You guessed it! ");
+
+            }   
+
+            else if (intguess > number)
+            {
+                Console.WriteLine("Lower ");
+            }
+
+            else if (intguess < number)
+            {
+                Console.WriteLine("Higher ");
+            }
+    }
+    }
 }
