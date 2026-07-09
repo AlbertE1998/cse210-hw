@@ -4,6 +4,26 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello World! This is the Resumes Project.");
+        Job firstJob = new Job();
+        firstJob._jobTitle = "Software Engineer";
+        firstJob._company = "Microsoft";
+        firstJob._startYear = "2019";
+        firstJob._endYear = "2022";
+
+        Job secondJob = new Job();
+        secondJob._jobTitle = "Manager";
+        secondJob._company = "Apple";
+        secondJob._startYear = "2022";
+        secondJob._endYear = "2023";
+
+        Resume myResume = new Resume();
+        myResume._name = "Allison Rose";
+
+        myResume._jobs.Add(firstJob);
+        myResume._jobs.Add(secondJob);
+
+        myResume.ResumeList();
+
+        
     }
 }
